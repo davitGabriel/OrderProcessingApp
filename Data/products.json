@@ -1,0 +1,59 @@
+[
+  {
+    "Id": 1,
+    "Name": "Margarita",
+    "Price": 100,
+    "Ingredients": [
+      { "Id": 1 },
+      { "Id": 2 },
+      { "Id": 3 }
+    ]
+  },
+  {
+    "Id": 2,
+    "Name": "Pizza",
+    "Price": 399.9,
+    "Ingredients": [
+      { "Id": 1 },
+      { "Id": 2 },
+      { "Id": 3 },
+      { "Id": 6 }
+    ]
+  },
+  {
+    "Id": 3,
+    "Name": "Burger",
+    "Price": 449.9,
+    "Ingredients": [
+      { "Id": 1 },
+      { "Id": 2 },
+      { "Id": 3 },
+      { "Id": 4 },
+      { "Id": 5 }
+    ]
+  },
+  {
+    "Id": 4,
+    "Name": "Pepperoni Pizza",
+    "Price": 499,
+    "Ingredients": [
+      { "Id": 1 }, 
+      { "Id": 2 }, 
+      { "Id": 3 },
+      { "Id": 4 },
+      { "Id": 5 },
+      { "Id": 7 }
+    ]
+  },
+  {
+    "Id": 5,
+    "Name": "Veggie Pizza",
+    "Price": 475,
+    "Ingredients": [
+      { "Id": 1 },
+      { "Id": 3 },
+      { "Id": 5 }
+    ]
+  }
+]
+

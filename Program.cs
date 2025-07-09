@@ -5,17 +5,19 @@ using OrderProcessingApp.Services;
 var repository = new JsonRepository();
 var orderService = new OrderService(repository);
 var orders = orderService.GetOrders();
-var totalAmountOfIngredients = orderService.GetTotalAmountOfIngredients(orders.ToList());
+
+decimal totalPriceOfIngredients = 0;
+var ingredients = orderService.GetTotalAmountOfIngredients(orders.ToList(), out totalPriceOfIngredients);
 
 DisplayValidOrders(orders);
 
-Console.WriteLine($"\nAmount of ingredients required: { totalAmountOfIngredients }");
+DisplayIngredientSummary(ingredients, totalPriceOfIngredients);
 
 Console.ReadLine();
 
 static void DisplayValidOrders(IEnumerable<Order> orders)
 {
-    Console.WriteLine("=====Valid Orders Summary=====");
+    Console.WriteLine("===== Valid Orders Summary =====");
 
     var invalidOrders = new List<Order>();
 
@@ -34,4 +36,22 @@ static void DisplayValidOrders(IEnumerable<Order> orders)
             }
         }
     }
+}
+
+static void DisplayIngredientSummary(Dictionary<string, int> ingredients, decimal totalPrice)
+{
+    Console.WriteLine("\n===== Ingredient Summary =====\n");
+
+    if (ingredients == null || ingredients.Count == 0)
+    {
+        Console.WriteLine("No ingredients found.");
+        return;
+    }
+
+    foreach (var ingredient in ingredients)
+    {
+        Console.WriteLine($"Ingredient: {ingredient.Key}, Count: {ingredient.Value}");
+    }
+
+    Console.WriteLine($"\nTotal Ingredients Price: {totalPrice}");
 }

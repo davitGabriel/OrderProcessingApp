@@ -2,7 +2,7 @@
   {
     "Id": 1,
     "Name": "Margarita",
-    "Price": 100,
+    "Price": 390,
     "Ingredients": [
       { "Id": 1 },
       { "Id": 2 },
@@ -12,37 +12,35 @@
   {
     "Id": 2,
     "Name": "Pizza",
-    "Price": 399.9,
+    "Price": 599.9,
     "Ingredients": [
-      { "Id": 1 },
-      { "Id": 2 },
-      { "Id": 3 },
-      { "Id": 6 }
+      { "Id": 4 },
+      { "Id": 5 },
+      { "Id": 6 },
+      { "Id": 7 }
     ]
   },
   {
     "Id": 3,
     "Name": "Burger",
-    "Price": 449.9,
+    "Price": 649.9,
     "Ingredients": [
       { "Id": 1 },
       { "Id": 2 },
       { "Id": 3 },
-      { "Id": 4 },
-      { "Id": 5 }
+      { "Id": 5 },
+      { "Id": 7 }
     ]
   },
   {
     "Id": 4,
     "Name": "Pepperoni Pizza",
-    "Price": 499,
+    "Price": 699,
     "Ingredients": [
       { "Id": 1 }, 
       { "Id": 2 }, 
       { "Id": 3 },
-      { "Id": 4 },
-      { "Id": 5 },
-      { "Id": 7 }
+      { "Id": 4 }
     ]
   },
   {
@@ -52,7 +50,17 @@
     "Ingredients": [
       { "Id": 1 },
       { "Id": 3 },
-      { "Id": 5 }
+      { "Id": 9 }
+    ]
+  },
+  {
+    "Id": 6,
+    "Name": "",
+    "Price": 549,
+    "Ingredients": [
+      { "Id": 1 },
+      { "Id": 3 },
+      { "Id": 4 }
     ]
   }
 ]

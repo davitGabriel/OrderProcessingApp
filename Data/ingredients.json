@@ -27,7 +27,7 @@
   {
     "Id": 6,
     "Name": "Onions",
-    "Price": 0
+    "Price": 25
   },
   {
     "Id": 7,
@@ -42,7 +42,7 @@
   {
     "Id": 9,
     "Name": "Garlic",
-    "Price": 51
+    "Price": 0
   },
   {
     "Id": 10,

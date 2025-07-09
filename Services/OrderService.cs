@@ -58,9 +58,10 @@ namespace OrderProcessingApp.Services
             return ordersList;
         }
 
-        public decimal GetTotalAmountOfIngredients(List<Order> orders)
+        public Dictionary<string, int> GetTotalAmountOfIngredients(List<Order> orders, out decimal totalPrice)
         {
-            decimal totalAmountOfIngredients = 0;
+            totalPrice = 0;
+            var ingredients = new List<Ingredient>();
 
             foreach (var order in orders)
             {
@@ -71,12 +72,17 @@ namespace OrderProcessingApp.Services
                 {
                     foreach (var ingredient in product.Ingredients)
                     {
-                        totalAmountOfIngredients += ingredient.Price;
+                        totalPrice += ingredient.Price;
+                        ingredients.Add(ingredient);
                     }
                 }
             }
 
-            return totalAmountOfIngredients;
+            Dictionary<string, int> ingredientSummary = ingredients
+                .GroupBy(i => i.Name)
+                .ToDictionary(g => g.Key, g => g.Count());
+
+            return ingredientSummary;
         }
     }
 }
